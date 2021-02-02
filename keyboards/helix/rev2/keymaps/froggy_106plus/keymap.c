@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
    * | Shift|   Y  |   S  |   N  |   I  |   U  |Space |      |      |      |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * | Ctrl | Alt  | Gui  | Sym  | Num  | OPT  | Ent  |      |      |      |      |      |      |      |
+   * | Ctrl | Gui  | Alt  | Sym  | Num  | OPT  | Ent  |      |      |      |      |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_BASE] = LAYOUT( \
@@ -102,14 +102,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KANA,          KC_P,          KC_K,          KC_R,      KC_A,      KC_F,                                   _______,  _______,  _______,  _______,  _______,  _______, \
       KC_BSPC,       KC_D,          KC_T,          KC_H,      KC_E,      KC_O,                                   _______,  _______,  _______,  _______,  _______,  _______, \
       OSM(MOD_LSFT), KC_Y,          KC_S,          KC_N,      KC_I,      KC_U,       KC_SPC, _______,  _______,  _______,  _______,  _______,  _______,  _______, \
-      OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), L_SYM,     L_NUM,     OPT_TAP_SP, KC_ENT, _______,  _______,  _______,  _______,  _______,  _______,  _______ \
+      OSM(MOD_LCTL), OSM(MOD_LGUI), OSM(MOD_LALT), L_SYM,     L_NUM,     OPT_TAP_SP, KC_ENT, _______,  _______,  _______,  _______,  _______,  _______,  _______ \
       ),
   [_BASE_106] = LAYOUT( \
       LCTL(KC_Z),    JP_SCLN,       JP_LBRC,       JP_LPRN,   JP_LT,     JP_LCBR,                                _______,  _______,  _______,  _______,  _______,  _______, \
       KANA,          KC_P,          KC_K,          KC_R,      KC_A,      KC_F,                                   _______,  _______,  _______,  _______,  _______,  _______, \
       KC_BSPC,       KC_D,          KC_T,          KC_H,      KC_E,      KC_O,                                   _______,  _______,  _______,  _______,  _______,  _______, \
       OSM(MOD_LSFT), KC_Y,          KC_S,          KC_N,      KC_I,      KC_U,       KC_SPC, _______,  _______,  _______,  _______,  _______,  _______,  _______, \
-      OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), L_SYM,     L_NUM,     OPT_TAP_SP, KC_ENT, _______,  _______,  _______,  _______,  _______,  _______,  _______ \
+      OSM(MOD_LCTL), OSM(MOD_LGUI), OSM(MOD_LALT), L_SYM,     L_NUM,     OPT_TAP_SP, KC_ENT, _______,  _______,  _______,  _______,  _______,  _______,  _______ \
       ),
 
   /* Opt
@@ -235,8 +235,8 @@ void set_mac_mode(bool enable) {
     keymap_config.swap_ralt_rgui = false;
   }else{
     user_config.mac_mode = false;
-    keymap_config.swap_lalt_lgui = true;
-    keymap_config.swap_ralt_rgui = true;
+    keymap_config.swap_lalt_lgui = false;
+    keymap_config.swap_ralt_rgui = false;
   }
   eeconfig_update_user(user_config.raw);
 }
