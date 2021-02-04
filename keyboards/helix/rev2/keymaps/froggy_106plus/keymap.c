@@ -164,7 +164,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_INS,  JP_GRV,  _______, KC_PGUP, KC_PGDN, JP_CIRC,                   _______,  _______,  _______,  _______,  _______,  _______, \
       _______, JP_BSLS, JP_HASH, JP_EQL,  JP_QUES, JP_PERC,                   _______,  _______,  _______,  _______,  _______,  _______, \
       _______, JP_DLR,  KC_UP,   JP_AT,   JP_EXLM, JP_PIPE,                   _______,  _______,  _______,  _______,  _______,  _______, \
-      KC_CAPS, KC_LEFT, KC_DOWN, KC_RIGHT,JP_UNDS, JP_AMPR, _______, _______, _______,  _______,  _______,  _______,  _______,  _______, \
+   LSFT(KC_CAPS),KC_LEFT,KC_DOWN,KC_RIGHT,JP_UNDS, JP_AMPR, _______, _______, _______,  _______,  _______,  _______,  _______,  _______, \
       _______, _______, KC_PSCR, _______, JP_TILD, _______, _______, _______, _______,  _______,  _______,  _______,  _______,  _______ \
       ),
   
